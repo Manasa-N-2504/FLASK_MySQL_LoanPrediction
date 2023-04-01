@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOGIN PAGE</title>
+	<style>
+		body {
+			background-color: black;
+			margin: 0;
+			padding: 0;
+		}
+		.login-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			margin-top: 0cm;
+		}
+		h1 {
+			color: lightgreen;
+			margin-top: 0px;
+		}
+		h2 {
+			color: lightblue;
+			font-family: Times new roman;
+			font size = 5;
+			margin-top: 0;
+		}
+		label {
+			color: cyan;
+			font-family: calibri;
+			font size = 5;;
+		}
+		input[type="text"],
+		input[type="password"],
+		input[type="submit"] {
+			padding: 5px;
+			border-radius: 5px;
+			border: none;
+			margin: 5px;
+			width: 200px;
+			height: 30px;
+			font-size: 16px;
+		}
+		input[type="submit"] {
+			background-color: red;
+			font-family: arial;
+			color: white;
+			cursor: pointer;
+		}
+		input[type="submit"]:hover {
+			background-color: orange;
+			font-family: arial;
+			color: black;
+			cursor: pointer;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="login-container">
+		<h1 style="font-family: times new roman;">WELCOME TO OUR WEBSITE <br> - - - - LOAN PREDICTION - - - - </h1>
+		<div class="h-tag">
+    		<h2>LOGIN INTO YOUR ACCOUNT</h2>
+    	</div>
+		<form action="/login" method="Post" align="center" cellpadding="10" border="0">
+		<label for="username" style="color: cyan;">ENTER USERNAME:</label>
+		<input type="text" id="username" name="username" placeholder="Enter Username">
+		<br />
+		<label for="password" style="color: cyan;">ENTER PASSWORD:</label>
+		<input type="password" id="password" name="password" placeholder="Enter Password">
+		<br /><br />
+		<colspan="2" align="center"><input type="submit" value="LOGIN">
+		<br /><br />
+		</form>
+		<h1> {{info}} </h1>
+	</div>
+	
+</body>
+</html>

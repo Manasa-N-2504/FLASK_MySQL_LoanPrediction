@@ -1,0 +1,122 @@
+<html>
+	<head>
+		<title>SUCCESS PAGE</title>
+		<style type="text/css">
+			/* body css for whole page */
+    		body{
+	    		margin:0px;
+	    		background-color:#000000;
+	    		color:#8bcdff;
+	    		font-family:Georgia;
+				font-size:17px;
+    		}
+			h1 {
+				color: rgb(166, 251, 227);
+				font-family:'Times New Roman';
+				font size = 5;
+				margin-top: 0;
+			}
+			h2 {
+				color: rgba(233, 160, 255, 0.839);
+				font-family:'Times New Roman';
+				font size = 5;
+				margin-top: 0;
+			}
+			tbody td {
+				font-size: 115%;
+			}
+    		.input-form {
+				opacity: 1;
+				transition: opacity 1s ease-in-out;
+			}
+			.input-form.hidden {
+				opacity: 0;
+				pointer-events: none;
+			}
+			.result {
+				opacity: 0;
+				transition: opacity 1s ease-in-out;
+			}
+			.result.visible {
+				opacity: 1;
+			}
+		</style>
+		<script>
+			function showResult() {
+				const inputForm = document.querySelector('.input-form');
+				inputForm.classList.add('hidden');
+				setTimeout(() => {
+					inputForm.style.display = 'none';
+					const result = document.querySelector('.result');
+					result.classList.add('visible');
+				}, 1000);
+			}
+		</script>
+	</head>
+	<body class="starting" onclick="showResult()">
+		<br/>
+		<h1 align="center"> LOAN SANCTION </h1>
+		<br/>
+		<div class="input-form">
+			<div class="h-tag">
+				<h2 align="center"> FOLLOWING WERE THE INPUTS GIVEN :  </h2>
+			</div>
+			<table cellspacing="5" align="center" cellpadding="5" border="0">
+				<tr>
+					 <td><h4> APPLICANT INCOME : </h4></td>
+					<td><h4> {{input1}} </h4></td>
+				</tr>
+				<tr>
+					 <td><h4> CO APPLICANT INCOME : </h4></td>
+					<td><h4> {{input2}} </h4></td>
+				</tr>
+				<tr>
+					<td><h4> LOAN AMMOUNT : </h4></td>
+				   <td><h4> {{input3}} </h4></td>
+			   </tr>
+
+			   <tr>
+					<td><h4> TERM : </h4></td>
+				   <td><h4> {{input4}} </h4></td>
+			   </tr>
+
+			   <tr>
+					<td><h4> CREDIT HISTORY : </h4></td>
+				   <td><h4> {{input5}} </h4></td>
+			   </tr>
+
+			   <tr>
+					<td><h4> GENDER : </h4></td>
+				   <td><h4> {{input6}} </h4></td>
+			   </tr>
+
+			   <tr>
+				   <td><h4> MARRIAGE : </h4></td>
+				  <td><h4> {{input7}} </h4></td>
+			   </tr>
+
+               <tr>
+ 				  <td><h4> EDUCATION : </h4></td>
+ 				 <td><h4> {{input8}} </h4></td>
+ 			    </tr>
+
+			   <tr>
+				   <td><h4> SELF EMPLOYMENT : </h4></td>
+				  <td><h4> {{input9}} </h4></td>
+    		   </tr>
+
+			</table>
+		</div>
+		<div class="result">
+			<div class="h-tag">
+				<h2 align="center">PREDICTION RESULT </h2>
+			</div>
+			<h4 style="font-size: 16pt" align="center"> LOAN SANCTION : {{result}} </h4>
+			<br/>
+			<br/>
+			<form  action="/logout" align="center" >
+				<input type="submit" value="Exit" style="font-size: 12pt"/>
+			</form>
+		</div>
+	</body>
+</html>

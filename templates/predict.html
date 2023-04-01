@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOAN PREDICTION</title>
+	<style>
+		body {
+			font-family: 'Times New Roman', Times, serif;
+			background-color: #000000;
+		}
+		h1 {
+			text-align: center;
+			color: rgb(198, 109, 252);
+			font-family: 'georgia';
+			margin-top: 0px;
+		}
+		h2 {
+			text-align: center;
+			color: rgb(253, 132, 121);
+			font-family: 'Times new roman';
+			font size = 7;
+			margin-top: 0;
+		}
+		form {
+			width: 650px;
+			margin: 0 auto;
+			background-color: #a9ffee;
+			padding: 30px;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px #dbfff7;
+		}
+		label {
+			display: block;
+			margin-bottom: 10px;
+			font-weight: bold;
+			color: #3d3d3d;
+		}
+		input[type="text"] {
+			padding: 5px;
+			width: 100%;
+			border-radius: 5px;
+			border: 1px solid #ffffff;
+			margin-bottom: 20px;
+			font-size: 16px;
+			color: #555;
+		}
+		input[type="submit"] {
+			background-color: #0062ff;
+			color: rgb(255, 255, 255);
+			padding: 10px;
+			border: #000000;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+			margin-bottom: 20px;
+		}
+		input[type="submit"]:hover {
+			background-color: #a9ffee;
+			color: rgb(0, 0, 0);
+		}
+	</style>
+</head>
+<body>
+	<br/>
+	<h1 style="font-size: 24pt" align="center"> LOAN SANCTIONING PREDICTION </h1>
+	<br/>
+	<div id="main">
+	<div class="h-tag">
+		<h2 style="font-size: 15pt" align="center"> ENTER THE FOLLOWING DETAILS:</h2>
+	</div>
+	
+	<form action="/prediction" method="Post" align="center" cellpadding="8" border="5">
+		<table cellspacing="2" align="center" cellpadding="8" border="0">
+
+			<tr>
+				<td><label for="Applicant_Income" style="font-size: 12pt"> ENTER APPLICANT INCOME : </label></td>
+				<td><input type="text" style="font-size: 12pt" name="Applicant_Income" required placeholder="ENTER APPLICANT INCOME"/></td>
+			</tr>
+
+			<tr>
+				<td><label for="Coapplicant_Income" style="font-size: 12pt"> ENTER CO APPLICANT INCOME : </label></td>
+				<td><input type="text" style="font-size: 12pt" name="Coapplicant_Income" required placeholder="ENTER CO APPLICANT INCOME"/></td>
+		    </tr>
+
+			<tr>
+				<td><label for="Loan_Amount" style="font-size: 12pt"> ENTER LOAN AMMOUNT : </label></td>
+				<td><input type="text" style="font-size: 12pt" name="Loan_Amount" required placeholder="ENTER LOAN AMMOUNT"/></td>
+		    </tr>
+		   
+			<tr>
+				<td><label for="Term" style="font-size: 12pt"> ENTER TERM : </label></td>
+				<td><input type="text" style="font-size: 12pt" name="Term" required placeholder="ENTER TERM"/></td>
+		    </tr>
+
+            <tr>
+				<td><label for="Credit_History" style="font-size: 12pt"> ENTER CREDIT HISTORY : </label></td>
+				<td><input type="text" style="font-size: 12pt" name="Credit_History" required placeholder="ENTER CREDIT HISTORY"/></td>
+		    </tr>
+
+			<tr>
+				<td><label for="Gender" style="font-size: 12pt"> SELECT GENDER : </label></td>
+				<td><select style="font-size: 12pt" name="Gender" required id="GENDER">
+   			 		<option value="male">Male</option>
+  					<option value="female">Female</option>
+				</select>
+				</td>
+			</tr>
+
+			<tr>
+				<td><label for="Married" style="font-size: 12pt"> SELECT IF YOU ARE MARRIED OR NOT : </label></td>
+				<td><select style="font-size: 12pt" name="Married" required id="MARRIED">
+   			 		<option value="yes">YES</option>
+  					<option value="no">NO</option>
+				</select>
+				</td>
+			</tr>
+
+			<tr>
+				<td><label for="Education" style="font-size: 12pt"> SELECT IF YOU ARE GRADUATE OR NOT : </label></td>
+				<td><select style="font-size: 12pt" name="Education" required id="EDUCATION">
+   			 		<option value="yes">YES</option>
+  					<option value="no">NO</option>
+				</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label for="Self_Employed" style="font-size: 12pt"> SELECT IF YOU ARE SELF EMPLOYED OR NOT : </label></td>
+				<td><select style="font-size: 12pt" name="Self_Employed" required id="SELF EMPLOYED">
+   			 		<option value="yes">YES</option>
+  					<option value="no">NO</option>
+				</select>
+				</td>
+			</tr>
+			
+		</table>
+		<br><br>
+
+		<input type="submit"  font="Arial" style="font-size: 12pt"/>
+	</form>
+</body>
+</html>
+o
